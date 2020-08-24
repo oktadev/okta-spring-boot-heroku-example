@@ -4,6 +4,8 @@ import indexPage
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.http.MediaType
+import org.springframework.security.core.annotation.AuthenticationPrincipal
+import org.springframework.security.oauth2.core.oidc.user.OidcUser
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
@@ -17,5 +19,5 @@ fun main(args: Array<String>) {
 @RestController
 class TheController {
 	@GetMapping("/", produces = [MediaType.TEXT_HTML_VALUE])
-	fun theAnswer(): String = indexPage()
+	fun theAnswer(@AuthenticationPrincipal user: OidcUser?): String = indexPage(user)
 }

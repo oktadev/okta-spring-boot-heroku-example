@@ -20,7 +20,7 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-//	implementation("com.okta.spring:okta-spring-boot-starter:1.4.0")
+	implementation("com.okta.spring:okta-spring-boot-starter:1.4.0")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.7.1-1.4.0-rc")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
