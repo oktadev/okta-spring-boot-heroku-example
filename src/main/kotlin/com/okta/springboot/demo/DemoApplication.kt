@@ -1,5 +1,6 @@
 package com.okta.springboot.demo
 
+import indexPage
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.http.MediaType
@@ -16,5 +17,5 @@ fun main(args: Array<String>) {
 @RestController
 class TheController {
 	@GetMapping("/", produces = [MediaType.TEXT_HTML_VALUE])
-	fun theAnswer(): String = "<h1>Hello, World</h1>"
+	fun theAnswer(): String = indexPage()
 }
