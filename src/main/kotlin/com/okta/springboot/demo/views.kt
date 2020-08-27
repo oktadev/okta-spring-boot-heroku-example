@@ -28,7 +28,7 @@ private fun FlowContent.enlightenedUserView(user: OidcUser) {
             +"42"
         }
     }
-    hr {  }
+    hr { }
     p("text-right text-muted small") {
         +"Your email ${user.email} is ${"not".takeIf { !user.emailVerified }.orEmpty()} verified"
     }
